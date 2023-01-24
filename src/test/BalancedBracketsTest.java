@@ -1,5 +1,6 @@
 package test;
 
+import main.BalancedBrackets;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -12,5 +13,13 @@ public class BalancedBracketsTest {
         assertEquals(true, true);
     }
 
+    @Test
+    public void simpleTest(){
+        assertTrue(BalancedBrackets.hasBalancedBrackets("[]"));
+    }
 
+    @Test
+    public void failTestOne(){
+        assertFalse(BalancedBrackets.hasBalancedBrackets("Launch]Code["));
+    }
 }
